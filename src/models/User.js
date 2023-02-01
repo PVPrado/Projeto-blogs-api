@@ -2,12 +2,20 @@ const User = (sequelize, DataTypes) => {
   const UserTable = sequelize.define('User', {
     id: {
       type: DataTypes.INTEGER,
-      primaryKey: true
+      primaryKey: true,
     }, 
-    display_name: DataTypes.STRING,
-    email: DataTypes.STRING,
-    password: DataTypes.STRING,
-    image: DataTypes.STRING,
+    displayName: {
+      type: DataTypes.STRING
+    },
+    email: {
+      type: DataTypes.STRING
+    },
+    password: {
+      type: DataTypes.STRING
+    },
+    image: {
+      type: DataTypes.STRING
+    },
   }, {
     tableName: 'users',
     underscored: true,

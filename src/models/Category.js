@@ -6,7 +6,10 @@ const Category = (sequelize,DataTypes) => {
     },
     name: {
       type: DataTypes.STRING, 
-    }
+    },
+  }, {
+    tableName: 'categories',
+    underscored: true
   });
 
   return CategoryTable;
